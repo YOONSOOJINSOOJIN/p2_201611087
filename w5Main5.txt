@@ -1,4 +1,5 @@
-﻿start
+## 성적을 입력받아 A~F 학점 처리
+start
 
 :get user input marks;
 if(90<= marks <=100)
