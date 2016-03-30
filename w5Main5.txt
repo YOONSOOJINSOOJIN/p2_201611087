@@ -1,4 +1,4 @@
-## 성적을 입력받아 A~F 학점 처리
+## 성적을 입력받아 A~F 학점 처리 (PLANTUML)
 start
 
 :get user input marks;
