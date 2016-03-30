@@ -12,7 +12,7 @@ wn.exitonclick()
 
 
 #바람개비 다이어그램
-#바람개비 모형 그리기 다이어그램  
+
 %%plantuml  
  @startuml 
    
