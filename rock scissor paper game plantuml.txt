@@ -1,0 +1,61 @@
+@startuml
+
+ 
+
+start
+
+:Let's start rock scissor paper game;
+
+if(rock)
+
+   if(scissor)
+
+   :win;
+
+   elseif(rock)
+
+   :draw;
+
+   elseif(paper)
+
+   :lose;
+
+   endif
+
+elseif(scissor)
+
+   if(scissor)
+
+   :draw;
+
+   elseif(rock)
+
+   :lose;
+
+   elseif(paper)
+
+   :win;
+
+   endif
+
+elseif(paper)
+
+   if(scissor)
+
+   :lose;
+
+   if(rock)
+
+   :win;
+
+   if(paper)
+
+   :draw;
+
+   endif
+
+endif
+
+:print result;
+
+stop
