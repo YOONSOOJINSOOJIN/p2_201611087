@@ -1,0 +1,21 @@
+@startuml
+
+start 
+ 
+:height=1.8; 
+:weight=70; 
+:bmi = weight / (height*height); 
+:bmi; 
+if (bmi<=18.5) 
+:Underweight; 
+elseif (18.5<bmi<=23) 
+:Normalweight; 
+elseif (23<bmi<=25) 
+:Overweight; 
+elseif (25<bmi<=30) 
+:Obesity; 
+elseif (bmi>30) 
+:An extremely obese; 
+endif  
+
+stop
