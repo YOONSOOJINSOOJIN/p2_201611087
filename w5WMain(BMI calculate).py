@@ -1,6 +1,6 @@
-﻿height=input ("input user height (m):")
+﻿height=input ("input user height 1.8(m):")
 
-weight=input ("input user weight (kg):")
+weight=input ("input user weight 70(kg):")
 
 BMI=weight/(height*height)
 
