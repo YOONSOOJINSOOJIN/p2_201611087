@@ -42,7 +42,6 @@ UpandDown()
   
  
  
- 
  title Up and Down Game
  
  
@@ -51,15 +50,15 @@ UpandDown()
  
  
  
- start
+start
  
  
  
- :soojin1 :Please write your number(=soojin1);
+:soojin1 :Please write your number(=soojin1);
  
  
  
- :soojin2 :Please determine opportunity number(=x) and Please write your number(=soojin2);
+:soojin2 :Please determine opportunity number(=x) and Please write your number(=soojin2);
  
  
  
@@ -67,62 +66,54 @@ UpandDown()
  
  
  
- while( )
+while( )
  
  
  
- if (non soojin1=soojin2) then (soojin1<soojin2)
+if (non soojin1=soojin2) then (soojin1<soojin2)
  
  
  
- :Up;
+:Up;
  
 
- else (soojin1>soojin2)
+else (soojin1>soojin2)
  
  
  
- :Down;
+:Down;
  
  
  
- endif
+endif
  
  
  
- endwhile
+endwhile
  
  
  
- :chance is over or soojin1=soojin2;
+:chance is over or soojin1=soojin2;
  
  
  
- if ( ) then (over chance)
+if ( ) then (over chance)
  
  
  
- :End Game;
+:End Game;
  
  
  
- else (soojin1=soojin2)
+else (soojin1=soojin2)
  
  
  
- :Good!;
+:Good!;
  
  
  
- endif
- 
- 
- 
-  
- 
- 
- 
- :Game Over;
+endif
  
  
  
@@ -130,8 +121,16 @@ UpandDown()
  
  
  
- @enduml
- """
+:Game Over;
+ 
+ 
+ 
+  
+ 
+ 
+ 
+@enduml
+"""
  
  def lab6():
      UpandDown()
