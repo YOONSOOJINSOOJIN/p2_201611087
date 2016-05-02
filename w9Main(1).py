@@ -24,7 +24,6 @@ print d
 print len(d)
 print d.keys()
 print d.values()
-%matplotlib inline
 
 import matplotlib
 import matplotlib.pyplot as plt
