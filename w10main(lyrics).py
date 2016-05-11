@@ -75,3 +75,11 @@
 	if d.values()[v]>=20:
 
 	print d.keys()[v], d.values()[v]
+	
+def lab10():
+	lyrics()
+def main():
+	lab10()
+if__name__=="__main__":
+	main()
+wn=raw_input()
