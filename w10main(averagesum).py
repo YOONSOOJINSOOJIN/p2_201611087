@@ -55,3 +55,11 @@
 	print 'Math'
 
 	print result2
+	
+def lab10():
+	averagesum()
+def main():
+	lab10()
+if__name__=="__main__":
+	main()
+wn=raw_input()
