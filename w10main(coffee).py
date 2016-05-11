@@ -43,3 +43,11 @@
 	result=(100*a/len(data))
 
 	print result, "%"
+
+def lab10():
+	Milkproportion()
+def main():
+	lab10()
+if__name__=="__main__":
+	main()
+wn=raw_input()
