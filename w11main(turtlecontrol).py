@@ -27,6 +27,8 @@ def addkeys():
 	wn.onkey(keyleft,"Left")
 def addmouse():
 	wn.onclick(mousegoto)
-
+	
+addkeys()
+addmouse()
 wn.listen()
-wn.mainloop()
+turtle.mainloop()
