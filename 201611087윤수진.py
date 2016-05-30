@@ -1,4 +1,6 @@
-﻿import turtle
+import turtle
+
+wn.bgpic("/Users/sujinyun/Desktop/myMaze.gif")
 
 wn=turtle.Screen()
 
@@ -10,48 +12,48 @@ t1.shape("turtle")
 
 t1.speed(3)
 
-t1.penup()
 
-t1.setheading(0)
+def keyup():
+    pt=t1.pos()
+    print "up",pt
+    t1.write(pt)
+    t1.forward(45)
 
-t1.goto(-300,200)
+def keyleft():
+    t1.left(45)
 
-t1.pendown()
+def keyright():
+    t1.right(45)
 
-t1.pencolor("blue")
+def keydown():
+    pt=t1.pos()
+    print "down",pt
+    t1.write(pt)
+    t1.back(45)
 
-t1.fd(350)
+def addKeys():
+    wn.onkey(keyup, "Up")
+    wn.onkey(keyleft, "Left")
+    wn.onkey(keyright, "Right")
+    wn.onkey(keydown, "Down")
+    wn.onkey(wn.bye, "q") 
 
-t1.right(90)
+    
+def mousegoto(x,y):
+    msg="mouse clicked {0} {1}".format(x,y)
+    wn.title(msg)
+    t1.setpos(x,y)
 
-t1.fd(350)
+def addMouse():
+    wn.onclick(mousegoto) 
 
-t1.left(90)
+def gamePlay():
+    addKeys()
+    wn.listen()
+    addMouse()
+    wn.listen()
+    turtle.mainloop()
 
-t1.fd(100)
 
-t1.left(90)
-
-t1.fd(300)
-
-t1.right(90)
-
-t1.fd(90)
-
-t1.right(90)
-
-t1.fd(250)
-
-t1.left(90)
-
-t1.fd(80)
-
-t1.left(90)
-
-t1.fd(100)
-
-t1.right(90)
-
-t1.fd(30)
-
-wn.exitonclick()
+def lab10():
+    gamePlay()
