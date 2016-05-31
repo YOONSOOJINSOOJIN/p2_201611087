@@ -1,82 +1,138 @@
-﻿import time
+﻿import turtle
 
-def msg():   
+wn=turtle.Screen()
 
-    myfile=open('output.txt','w')
+t1=turtle.Turtle()
 
-    line1='first line\n'
+import os
 
-    myfile.write(line1)
+mydir=os.getcwd()
 
-    line2='\t\tsecond line\n'
+filename='Python.txt'
 
-    myfile.write(line2)
+myfilename=mydir+'\\'+filename
 
-    line3='third'
+myfilename=os.path.join(mydir,filename)
 
-    myfile.write(line3)
+myfilehandle=open(myfilename)
 
-    myfile.close()
-
-    fin=open('output.txt','r')
-
-    fout=open('outputUpper.txt','w')
-
-    for line in fin:
-
-        words=line.split()
-
-        for word in words:
-
-            if word=='line':
-
-                word=word.upper()
-
-                word+='[ysj edited {0}]'.format(time.strftime('%Y-%m-%d %H:%M:%S'))
-
-                fout.write(word)
-
-        print word
-
-        fout.write('\n')
-
-    fin.close()
-
-    fout.close()
-
-print msg
+myfilehandle.close()
 
  
 
-def data():
+def read1():
 
-    data=[1,2,3,4,5,6,7,8,9,10]
+    try:
 
-    fout=open('outputNumber.txt','w')
+        fin1=open('Python.txt','a')
 
-    for i in data:
+        fin2=open('outputNumber.txt','r')
 
-        str="{0}\t".format(i)
+        for line in fin2:
 
-        if not i%2:
+            fin1.write(line)
 
-            str=str+'\n'
+        fin1.close()
 
-        fout.write(str)
+        fin2.close()
 
-    fout.close()
+    except Exception as e:
+
+        print e
+
+ 
+
+def read2():
+
+    try:
+
+        fin1=open('Python.txt','a')
+
+        fin2=open('outputNumber.txt','r')
+
+        for line in fin2:
+
+            fin1.write(line)
+
+        fin1.close()
+
+        fin2.close()
+
+    except Exception as e:
+
+        print e
+
+    myfilehandle=open(myfilename)
+
+    for line in myfilehandle:
+
+        print line
+
+    myfilehandle.close()
 
     
 
-print data()
+fres=open('reccords.txt')
+
+mycoords=[]
+
+for line in fres:
+
+    line1=line.split(',')
+
+    mycoords.append([(line1[0],line[1]),(line1[2],line1[3].strip())])
+
+fres.close()    
+
+    
+
+ 
+
+ 
+
+def drawSquareWithCoords(coords):
+
+    for coord in coords:
+
+        x1=int(coord[0][0])
+
+        x2=int(coord[1][0])
+
+        y1=int(coord[0][1])
+
+        y2=int(coord[1][1])
+
+        print x1,y1,x2,y2
+
+        t1.penup()
+
+        t1.setpos(x1,y1)
+
+        t1.pendown()
+
+        for i in range(4):
+
+            t1.fd(x2-x1)
+
+            t1.left(90)
+
+        
+
+drawSquareWithCoords(mycoords)
 
  
 
 def lab13():
 
-    msg()
+    print "error"
 
-    data()
+    read1()
+
+    print "append"
+
+    read2()
+
+    drawSquareWithCoords(mycoords)
 
     
 
@@ -89,3 +145,7 @@ def main():
 if __name__=="__main__":
 
     main()
+
+    
+
+raw_input()
