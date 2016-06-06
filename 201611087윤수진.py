@@ -1,9 +1,9 @@
-import turtle
 wn=turtle.Screen()
 t1=turtle.Turtle()
 t2=turtle.Turtle()
 t2.shape("turtle")
 t2.pencolor("green")
+gover=turtle.Turtle()
 def Maze():
     t1.speed(5)
     t1.penup()
@@ -79,10 +79,7 @@ def Maze():
     t2.penup()
     t2.goto(-300,270)
     t2.pendown()
-def gameOver():
-    t2.ht()
-    t2.pencolor("Red")
-    t2.write("GAME OVER", align = "center", font = ("courier", 25, "bold"))
+    
 
 def drawStarFill(size,color):
     angle = 144
@@ -92,7 +89,8 @@ def drawStarFill(size,color):
         t1.fd(size)
         t1.right(angle)
     t1.end_fill()
-def star():
+    
+def Star():
     t1.penup()
     t1.goto(-290,-200)
     t1.pendown()
@@ -111,218 +109,60 @@ def star():
     drawStarFill(40,"yellow")
     t1.ht()
 
-def keyup():
-    t2.forward(20)
-    t=t2.pos()
-    if -300<t[0]<300 and t[1]==300:
-        gameOver()
-        print "GAME OVER"
-    if -270<t[1]<300 and t[0]==300:
-        gameOver()
-        print "GAME OVER"
-    if -330<t[0]<330 and t[1]==-270:
-        gameOver()
-        print "GAME OVER"
-    if -270<t[1]<330 and t[0]==-330:
-        gameOver()
-        print "GAME OVER"
-    if -300<t[0]<-100 and t[1]==240:
-        gameOver()
-        print "GAME OVER"
-    if 40<t[1]<240 and t[0]==-100:
-        gameOver()
-        print "GAME OVER"
-    if -100<t[0]<-200 and t[1]==40:
-        gameOver()
-        print "GAME OVER"
-    if 40<t[1]<140 and t[0]==-200:
-        gameOver()
-        print "GAME OVER"
-    if -270<t[1]<190 and t[0]==-270:
-        gameOver()
-        print "GAME OVER"
-    if -250<t[0]<-50 and t[1]==0:
-        gameOver()
-        print "GAME OVER"
-    if 0<t[1]<250 and t[0]==-50:
-        gameOver()
-        print "GAME OVER"
-    if -250<t[0]<-150 and t[1]==-100:
-        gameOver()
-        print "GAME OVER"
-    if -140<t[1]<-100 and t[0]==-150:
-        gameOver()
-        print "GAME OVER"
-    if -210<t[1]<-170 and t[0]==-150:
-        gameOver()
-        print "GAME OVER"
-    if -150<t[0]<-250 and t[1]==-210:
-        gameOver()
-        print "GAME OVER"
-    if 50<t[0]<250 and t[1]==100:
-        gameOver()
-        print "GAME OVER"
-    if -270<t[1]<100 and t[0]==150:
-        gameOver()
-        print "GAME OVER"
-def keyleft():
-    t2.left(45)
+def up():
+    t2.setheading(90)
 
-def keyright():
-    t2.right(45)
+def down():
+    t2.setheading(270)
 
-def keydown():
-    t2.back(20)
-    t=t2.pos()
-    if -300<t[0]<300 and t[1]==300:
-        gameOver()
-        print "GAME OVER"
-    if -270<t[1]<300 and t[0]==300:
-        gameOver()
-        print "GAME OVER"
-    if -330<t[0]<330 and t[1]==-270:
-        gameOver()
-        print "GAME OVER"
-    if -270<t[1]<330 and t[0]==-330:
-        gameOver()
-        print "GAME OVER"
-    if -300<t[0]<-100 and t[1]==240:
-        gameOver()
-        print "GAME OVER"
-    if 40<t[1]<240 and t[0]==-100:
-        gameOver()
-        print "GAME OVER"
-    if -100<t[0]<-200 and t[1]==40:
-        gameOver()
-        print "GAME OVER"
-    if 40<t[1]<140 and t[0]==-200:
-        gameOver()
-        print "GAME OVER"
-    if -270<t[1]<190 and t[0]==-270:
-        gameOver()
-        print "GAME OVER"
-    if -250<t[0]<-50 and t[1]==0:
-        gameOver()
-        print "GAME OVER"
-    if 0<t[1]<250 and t[0]==-50:
-        gameOver()
-        print "GAME OVER"
-    if -250<t[0]<-150 and t[1]==-100:
-        gameOver()
-        print "GAME OVER"
-    if -140<t[1]<-100 and t[0]==-150:
-        gameOver()
-        print "GAME OVER"
-    if -210<t[1]<-170 and t[0]==-150:
-        gameOver()
-        print "GAME OVER"
-    if -150<t[0]<-250 and t[1]==-210:
-        gameOver()
-        print "GAME OVER"
-    if 50<t[0]<250 and t[1]==100:
-        gameOver()
-        print "GAME OVER"
-    if -270<t[1]<100 and t[0]==150:
-        gameOver()
-        print "GAME OVER"
+def left():
+    t2.setheading(180)
+
+def right():
+    t2.setheading(0)
+
     
 def mousegoto(x,y):
     t2.setpos(x,y)
     t2.pos=(x,y)
     t=t2.pos()
-    if -300<t[0]<300 and t[1]==300:
-        gameOver()
-        print "GAME OVER"
-    if -270<t[1]<300 and t[0]==300:
-        gameOver()
-        print "GAME OVER"
-    if -330<t[0]<330 and t[1]==-270:
-        gameOver()
-        print "GAME OVER"
-    if -270<t[1]<330 and t[0]==-330:
-        gameOver()
-        print "GAME OVER"
-    if -300<t[0]<-100 and t[1]==240:
-        gameOver()
-        print "GAME OVER"
-    if 40<t[1]<240 and t[0]==-100:
-        gameOver()
-        print "GAME OVER"
-    if -100<t[0]<-200 and t[1]==40:
-        gameOver()
-        print "GAME OVER"
-    if 40<t[1]<140 and t[0]==-200:
-        gameOver()
-        print "GAME OVER"
-    if -270<t[1]<190 and t[0]==-270:
-        gameOver()
-        print "GAME OVER"
-    if -250<t[0]<-50 and t[1]==0:
-        gameOver()
-        print "GAME OVER"
-    if 0<t[1]<250 and t[0]==-50:
-        gameOver()
-        print "GAME OVER"
-    if -250<t[0]<-150 and t[1]==-100:
-        gameOver()
-        print "GAME OVER"
-    if -140<t[1]<-100 and t[0]==-150:
-        gameOver()
-        print "GAME OVER"
-    if -210<t[1]<-170 and t[0]==-150:
-        gameOver()
-        print "GAME OVER"
-    if -150<t[0]<-250 and t[1]==-210:
-        gameOver()
-        print "GAME OVER"
-    if 50<t[0]<250 and t[1]==100:
-        gameOver()
-        print "GAME OVER"
-    if -270<t[1]<100 and t[0]==150:
-        gameOver()
-        print "GAME OVER"
-        
-def eatStar():
-    x1=coord[0][1]
-    x2=coord[1][0]
-    y1=coord[0][1]
-    y2=coord[1][1]
-    xs=min(-320,-260)
-    xe=max(-320,-260)
-    ys=min(-230,-170)
-    ye=max(-230,-170)
-    xs=min(-180,-120)
-    xe=max(-180,-120)
-    ys=min(60,120)
-    ye=max(60,120)
-    xs=min(-230,-170)
-    xe=max(-230,-170)
-    ys=min(-195,-135)
-    ye=min(-195,-135)
-    xs=min(210,270)
-    xe=max(210,270)
-    ys=min(-215,-155)
-    ye=max(-215,-155)
-
-        
+    
 
 def addKeys():
-    wn.onkey(keyup, "Up")
-    wn.onkey(keyleft, "Left")
-    wn.onkey(keyright, "Right")
-    wn.onkey(keydown, "Down")
+    wn.onkey(up, "Up")
+    wn.onkey(left, "Left")
+    wn.onkey(right, "Right")
+    wn.onkey(down, "Down")
     wn.listen()
 
-def addMouse():
-    wn.onclick(mousegoto) 
+
+
+def gameOver():
+    gover.ht()
+    gover.pencolor("Red")
+    gover.write("GAME OVER", align = "center", font = ("courier", 25, "bold"))
 
     
     
 def TurtleGame():
     Maze()
+    Star()
     addKeys()
-    star()
-    eatStar()
-    addMouse()
+    speed=2
+    while True:
+        t2.fd(speed)
+
+        if t2.xcor() < -300 or t2.xcor() > 300:
+            gameOver()
+            t2.ht()
+
+            
+        elif t2.ycor() < -300 or t2.ycor() > 300:
+            gameOver()
+            t2.ht()
+
+       
+ 
+       
 TurtleGame()
 turtle.mainloop()
